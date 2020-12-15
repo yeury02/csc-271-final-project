@@ -12,13 +12,26 @@ function addNewToDo() {
         let li = document.createElement("li");                
         let span = document.createElement("span")
         let i = document.createElement("i");
-        i.setAttribute("class", "fas fa-trash-alt");               
-        span.appendChild(i);                                       
+        i.setAttribute("class", "fas fa-trash-alt");  
+        
         let newContent = document.createTextNode(" " + inputVal);   
+
+        span.appendChild(i); 
         li.appendChild(span);
         li.appendChild(newContent);
-                                                              
+
         let ul = document.getElementById("list");             
         ul.appendChild(li);                                                    
     }
 }
+
+let ul = document.getElementById('list');
+ul.addEventListener('click', function(event) {
+    let target = event.target.tagName;
+    // check if the element clicked is an li
+    if (target === 'LI'){
+        // css class
+        ul.classList.toggle("completed");
+        alert(event.target.innerHTML);
+      }
+});
