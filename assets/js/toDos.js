@@ -8,14 +8,17 @@ function addNewToDo() {
         alert("You must write something if you want to add it to your toDo-list")
         return false;
     } else {
-        // I can assume an actual value was inputted
-        let li = document.createElement("li");                // create an li element
-        let newContent = document.createTextNode(inputVal);   // Create text node
-        li.appendChild(newContent);                           // Ex: <li> Do dishes </li>
-
-        console.log(li);
-
-        let ul = document.getElementById("list");             // get list 
-        ul.appendChild(li);                                   // append it to the list                     
+        // recreat below --> <li><span><i class="fas fa-trash-alt"></i></span> Example </li>
+        let li = document.createElement("li");                
+        let span = document.createElement("span")
+        let i = document.createElement("i");
+        i.setAttribute("class", "fas fa-trash-alt");               
+        span.appendChild(i);                                       
+        let newContent = document.createTextNode(" " + inputVal);   
+        li.appendChild(span);
+        li.appendChild(newContent);
+                                                              
+        let ul = document.getElementById("list");             
+        ul.appendChild(li);                                                    
     }
 }
