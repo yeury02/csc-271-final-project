@@ -5,7 +5,7 @@ function addNewToDo() {
 
     // check if a value was actually inputted
     if (inputVal === "") {
-        alert("You must write something if you want to add it to your toDo-list")
+        alert("You must write something if you want to add it to your toDo-list");
         return false;
     } else {
         // recreat below --> <li><span><i class="fas fa-trash-alt"></i></span> Example </li>
