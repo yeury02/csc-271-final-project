@@ -11,6 +11,11 @@ body {
     background: #eee
 }
 
+h1 {
+    color: #eee;
+    opacity: 0.8;
+}
+
 .wrapper {
     position: relative
 }
