@@ -17,15 +17,27 @@ function addToEvents(eventName, date) {
     eventDiv.appendChild(eventDescriptionBox);
     eventDiv.appendChild(eventDate);
 
+    // add remove button
+    let eventRemove = document.createElement("button");
+    eventRemove.className = "btn";
+    eventRemove.innerHTML = '<i class="fa fa-close"></i>';
+    eventRemove.setAttribute("onclick", "removeEvent(this)");
+    eventDescriptionBox.appendChild(eventRemove);
+
     // find categorization based on date
     let category = eventCategory(date);
 
     // add event to calendar
     let calendar = document.getElementById(category);
     calendar.appendChild(eventDiv);
-
 }
 
+function removeEvent(btn){
+    let header = btn.parentNode;
+    let event = header.parentNode;
+
+    event.remove();
+}
 
 function eventCategory(date){
     let currentDay = new Date();
