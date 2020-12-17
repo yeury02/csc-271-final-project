@@ -40,22 +40,25 @@ function removeEvent(btn){
 }
 
 function eventCategory(date){
+    let category;
     let currentDay = new Date();
     let eventDate = new Date(date);
-    if (currentDay > eventDate) {
-        return "earlier";
+    if (currentDay.getTime() >= eventDate.getTime()) {
+        category = "earlier";
     }
 
     let weekDaysLater = new Date();
     weekDaysLater.setDate(weekDaysLater.getDate() + 7);
 
-    if (eventDate >= currentDay && eventDate < weekDaysLater){
-        return "thisWeek";
+    if (eventDate.getTime() >= currentDay.getTime() && eventDate.getTime() < weekDaysLater.getTime()){
+        category = "thisWeek";
     }
 
-    if (eventDate >= weekDaysLater){
-        return "later";
+    if (eventDate.getTime() >= weekDaysLater.getTime()){
+        category = "later";
     }
+
+    return category;
 }
 
 function addNewEvent() {
