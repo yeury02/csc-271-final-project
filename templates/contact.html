@@ -10,15 +10,22 @@
     <script src="https://kit.fontawesome.com/544e9e3d6d.js" crossorigin="anonymous"></script>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
-
     <!-- CSS file -->
-    <link rel="stylesheet" href="../assets/css/index.css">
-
-    <!-- Js form -->
-    <script src="../assets/js/contact.js"></script>
-    </head>
-
-    <title>Contact Us!</title>
+    <link rel="stylesheet" href="../assets/css/contact.css">
+</head>
+<body>
+  <div class="container">
+    <form name="myForm" action="MAILTO:yeury02@uri.edu" id="contactus" method="post" enctype="text/plain">
+        <h3>Contact us form</h3>
+        <fieldset> <input placeholder="Full Name" id="name" name="Name" type="text" tabindex="1" required autofocus> </fieldset>
+        <fieldset> <input placeholder="Email Address" id="email" name="Email" type="email" tabindex="2" required> </fieldset>
+        <small>Format: 123-456-7890</small>
+        <fieldset> <input placeholder="Phone Number" id="phone-number"name="Phone-Number" type="tel" tabindex="3" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required> </fieldset>
+        <fieldset> <textarea placeholder="Type your message here..." id="message" name="Message" tabindex="5" required></textarea> </fieldset>
+        <fieldset> <button name="submit" type="submit" name="" value="send" id="contactus-submit" data-submit="...Sending" onclick="validateForm()">Send Now</button> </fieldset>
+    </form>
+</div>
+    <!-- <title>Contact Us!</title>
     <p>(our cashapps are as follows: $(Yeury's cashapp) $(Phidias' cashapp) $(Luis' cashapp) $Evanrusselllll)</p>
 
     <form action="mailto:who are we going to mail this to?" method="post" enctype="text/plain" id = "frogform" onSubmit = "return validation()">
@@ -31,4 +38,8 @@
       <label>Message: </label>
       <textarea name= "message" rows="25" cols="150"></textarea>
       <input type="submit" name="" value="send">
-    </form>
+    </form> -->
+
+    <script type="text/javascript" src="../assets/js/contact.js"></script>
+</body>
+</html>
