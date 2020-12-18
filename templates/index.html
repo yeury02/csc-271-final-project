@@ -16,28 +16,99 @@
 
     <title>Student Toolkit</title>
 </head>
-<body
-  <div class="wrapper d-flex">
-    <div class="sidebar">
-      <h1 class="display-4 pb-3 pl-4">Student Toolkit</h1>
-      <hr>
-      <ul>
-        <li><a href="#"><i class="fas fa-home"></i>Dashboard</a></li>
-        <li><a href="toDos.html"><i class="fas fa-clipboard"></i>ToDo-List</a></li>
-        <li><a href="#"><i class="fas fa-calendar-week"></i>Scheduler</a></li>
-        <li><a href="#"><i class="fas fa-calendar-week"></i>Scheduler</a></li>
-        <li><a href="#"><i class="fas fa-calendar-week"></i>Study-Guide</a></li>
-        <li><a href="#"><i class="fas fa-calendar-week"></i>Contact</a></li>
-      </ul>
+<body>
+    <!-- <div class="wrapper d-flex">
+        <div class="sidebar">
+        <h1 class="display-4 pb-3 pl-4">Student Toolkit</h1>
+        <hr>
+        <ul>
+            <li><a href="#"><i class="fas fa-home"></i>Dashboard</a></li>
+            <li><a href="toDos.html"><i class="fas fa-clipboard"></i>ToDo-List</a></li>
+            <li><a href="#"><i class="fas fa-calendar-week"></i>Scheduler</a></li>
+            <li><a href="#"><i class="fas fa-calendar-week"></i>Scheduler</a></li>
+            <li><a href="#"><i class="fas fa-calendar-week"></i>Study-Guide</a></li>
+            <li><a href="#"><i class="fas fa-calendar-week"></i>Contact</a></li>
+        </ul>
+        </div>
+    </div> -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="index.html">Student Toolkit</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarText">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="toDos.html">ToDo-List</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="calendar.html">Calendar</a>
+            </li>
+          </ul>
+          <span class="navbar-text">
+            Navbar text with an inline element
+          </span>
+        </div>
+      </nav>
+    
+  <div class="banner">
+    <img src="../assets/images/banner1.jpg" class="rounded mx-auto d-block img-fluid" alt="Responsive image" >  
+  </div>
+
+  <div class="container mx-auto">
+    <div class="row">
+      <div class="col-md-3">
+        <h2 class="first"><i class="far fa-list-alt fa-3x"></i></h2>
+        <h3>ToDo-List</h3>
+        <hr> Add items that you need to do.
+        <hr> <a href="toDos.html">Clickable link to said page</a>    
+      </div>
+      <div class="col-md-3">
+        <h2 class="first"><i class="far fa-calendar-alt fa-3x"></i></h2>
+        <h3>Calendar</h3>
+        <hr> Plan out the month ahead. 
+        <hr> <a href="calendar.html">Clickable link to said page</a>       
+      </div>
+      <div class="col-md-3">
+        <h2 class="first"><i class="far fa-clock fa-3x"></i></h2>
+        <h3>Timer</h3>
+        <hr> Time yourself.  
+        <hr> <a href="timer.html">Clickable link to said page</a>      
+      </div>
+      <div class="col-md-3">
+        <h2 class="first"><i class="fas fa-gamepad fa-3x"></i></h2>
+        <h3>Minigame</h3>
+        <hr> Unwind with a basic game.
+        <hr> <a href="game.html">Clickable link to said page</a>    
+      </div>
     </div>
   </div>
 
+  <!-- <div class="table-responsive">
+    <table class="table">
+        <thread>
+            <tr height="400px">
+                <td class="bg-dark text-center">
+                    <h2 class="first"><i class="far fa-list-alt fa-3x"></i></h2></td>
+                <td class="bg-rgb(46,94,175) text-center">
+                    <h2><i class="far fa-list-alt fa-3x"></i></h2></td>
+                <td class="bg-rgb text-center">
+                    <h2 class="third"><i class="far fa-clock fa-3x"></i></h2></td>
+                <td class="bg-rgb(43,92,278) text-center">
+                    <h2 class="fourth"><i class="fas fa-gamepad fa-3x"></i></h2></td>
+            </tr>
+        </thread>
+    </table>
+  </div> -->
 
   <!-- div for title
   <div>
     <h1>Student Toolkit</h1>
     </div>
-  <!-- div for navbar -->
+  div for navbar -->
   <!-- <div>
 
     </div>
@@ -58,7 +129,7 @@
     <h4>Plan out for the month ahead</h4>
     <h2>STUDY GUIDE</h2>
     <h4>Jot down notes for future reference/exams</h4>
-    </div> --> -->
+    </div> --> 
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script type="text/javascript" src="../assets/js/toDos.js"></script>
