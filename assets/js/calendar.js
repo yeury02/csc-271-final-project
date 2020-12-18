@@ -33,10 +33,54 @@ function addToEvents(eventName, date) {
 }
 
 function removeEvent(btn){
+    // get event from page
     let header = btn.parentNode;
     let event = header.parentNode;
 
+    // get name and date
+    let events_handler = event.innerText.split('\n')
+    let name = events_handler[0];
+    console.log(name);
+    let date = events_handler[1];
+    console.log(date);
+
+    // search for it
+    let events = JSON.parse(localStorage.getItem("events"));
+    for(var i = 0; i < events["name"].length; i++){
+        console.log("comparing...")
+        if (events["name"][i] == name && events["date"][i] == date){
+            events["name"].splice(i, 1);
+            events["date"].splice(i, 1);
+            console.log("found...")
+
+            break;
+        }
+    }
+
+    let events_serialized = JSON.stringify(events);
+    localStorage.setItem("events", events_serialized);
+
+    // remove event from page
     event.remove();
+}
+
+function removeFromStorage(name, date){
+
+}
+
+function loadEvents(){
+    if (localStorage.getItem("events") === null){
+        console.log("not loading...");
+        return false;
+    } else {
+        console.log("loading...");
+        let events = JSON.parse(localStorage.getItem("events"));
+        for(var i = 0; i < events["name"].length; i++){
+            console.log("entry");
+            addToEvents(events.name[i], events.date[i]);
+            console.log(events.name[i], events.date[i]);
+        }
+    }
 }
 
 function eventCategory(date){
@@ -61,6 +105,26 @@ function eventCategory(date){
     return category;
 }
 
+function addToStorage(name, date){
+    let events;
+    if (localStorage.getItem("events") === null){
+        events = {
+            name: [],
+            date: []
+        }
+
+    } else {
+        events = JSON.parse(localStorage.getItem("events"));
+    }
+
+    events.name.push(name);
+    events.date.push(date);
+
+    let events_serialized = JSON.stringify(events);
+
+    localStorage.setItem("events", events_serialized);
+}
+
 function addNewEvent() {
     // get input value
     let inputVal = document.getElementById("inputVal").value;
@@ -74,5 +138,24 @@ function addNewEvent() {
         return false;
     }
 
-    addToEvents(inputVal, dateVal)    
+    // ensure there isn't one similar
+    let events = JSON.parse(localStorage.getItem("events"));
+    if (events !== null){
+        for (var item = 0; item < events["name"].length; item++){
+            console.log(events["name"][item]);
+            console.log(events["date"][item]);
+            if (events["name"][item] == inputVal && events["date"][item] == dateVal){
+                alert("You already have an event similar to this.");
+                return false;
+            }
+        }
+    }
+
+    // add to the page and local storage
+    addToEvents(inputVal, dateVal);
+    addToStorage(inputVal, dateVal);
 }
+
+window.onload = function() {
+    loadEvents();
+};
