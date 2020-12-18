@@ -32,21 +32,41 @@ function addToEvents(eventName, date) {
     calendar.appendChild(eventDiv);
 }
 
-// function removeEvent(btn){
-//     // get event from page
-//     let header = btn.parentNode;
-//     let event = header.parentNode;
+function removeEvent(btn){
+    // get event from page
+    let header = btn.parentNode;
+    let event = header.parentNode;
 
-//     // get name and date
-//     let name = ;
+    // get name and date
+    let events_handler = event.innerText.split('\n')
+    let name = events_handler[0];
+    console.log(name);
+    let date = events_handler[1];
+    console.log(date);
 
-//     // remove event from page
-//     event.remove();
-// }
+    // search for it
+    let events = JSON.parse(localStorage.getItem("events"));
+    for(var i = 0; i < events["name"].length; i++){
+        console.log("comparing...")
+        if (events["name"][i] == name && events["date"][i] == date){
+            events["name"].splice(i, 1);
+            events["date"].splice(i, 1);
+            console.log("found...")
 
-// function removeFromStorage(name, date){
+            break;
+        }
+    }
 
-// }
+    let events_serialized = JSON.stringify(events);
+    localStorage.setItem("events", events_serialized);
+
+    // remove event from page
+    event.remove();
+}
+
+function removeFromStorage(name, date){
+
+}
 
 function loadEvents(){
     if (localStorage.getItem("events") === null){
