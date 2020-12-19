@@ -11,6 +11,9 @@ body {
     background: rgb(43, 192, 228)
 }
 
+.container {
+    margin-top: 50px;
+}
 
 h1 {
     color: #eee;
