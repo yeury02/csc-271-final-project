@@ -21,6 +21,14 @@ h1 {
     font-weight: normal
 }
 
+p {
+    text-align: center;
+}
+.child {
+    display: flex;
+    justify-content: center;
+}
+
 /* move + icon all the way to the right */
 .fa-plus {
     float: right
