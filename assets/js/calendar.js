@@ -64,9 +64,6 @@ function removeEvent(btn){
     event.remove();
 }
 
-function removeFromStorage(name, date){
-
-}
 
 function loadEvents(){
     if (localStorage.getItem("events") === null){
