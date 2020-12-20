@@ -6,3 +6,9 @@
     text-decoration: none;
     font-family: Arial;
 }
+
+.nav-span {
+    margin-right: 20px;
+    width: auto;
+    background: transparent; 
+}
