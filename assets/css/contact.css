@@ -1,6 +1,6 @@
 body {
     color: #777;
-    background: #fff
+    background: linear-gradient(to right, rgb(43, 192, 228), rgb(234, 236, 198));
 }
 
 .container {
