@@ -4,7 +4,7 @@ body {
 }
 
 /* remove bulle points from list */
-ul {
+#list {
     list-style: none;
     margin: 0;
     padding: 0;
@@ -26,12 +26,8 @@ h1 {
     float: right
 }
 
-.nav-item {
-    background: blue;
-}
-
 /* add some style to the li's */
-li {
+.toDo-li {
     background: #fff;
     height: 40px;
     line-height: 40px;
@@ -39,7 +35,7 @@ li {
 }
 
 /* change background-color to every other li element */
-li:nth-child(2n) {
+li.toDo-li:nth-child(2n) {
     background: #f7f7f7
 }
 
@@ -57,7 +53,7 @@ span {
 }
 
 /* do this when hover over an li */
-li:hover span {
+li.toDo-li:hover span {
     width: 40px;
     opacity: 1.0
 }
