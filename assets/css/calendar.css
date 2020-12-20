@@ -3,13 +3,6 @@ body {
     background: linear-gradient(to right, rgb(43, 192, 228), rgb(234, 236, 198));
 }
 
-/* remove bulle points from list */
-ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
 /* add style to title */
 h1 {
     background: #2980b9;
@@ -26,19 +19,6 @@ h1 {
     float: right
 }
 
-/* add some style to the li's */
-li {
-    background: #fff;
-    height: 40px;
-    line-height: 40px;
-    color: #666;
-}
-
-/* change background-color to every other li element */
-li:nth-child(2n) {
-    background: #f7f7f7
-}
-
 /* style the trash-can icon */
 span {
     background: #e74c3c;
@@ -50,12 +30,6 @@ span {
     display: inline-block;
     transition: 0.2s linear;
     opacity: 0
-}
-
-/* do this when hover over an li */
-li:hover span {
-    width: 40px;
-    opacity: 1.0
 }
 
 /* style text input */

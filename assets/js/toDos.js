@@ -11,7 +11,8 @@ function addNewToDo() {
         let li = document.createElement("li");                
         let span = document.createElement("span");
         let i = document.createElement("i");
-        i.setAttribute("class", "fas fa-trash-alt");  
+        i.setAttribute("class", "fas fa-trash-alt"); 
+        li.setAttribute("class", "toDo-li");
         
         let newContent = document.createTextNode(" " + inputVal);   
 
@@ -20,7 +21,7 @@ function addNewToDo() {
         li.appendChild(newContent);
 
         let ul = document.getElementById("list");             
-        ul.appendChild(li);                                                    
+        ul.appendChild(li);                                                  
     }
 }
 
@@ -29,7 +30,7 @@ $(document).ready(function(){
     // jQuery methods go here...
 
     // this is much easier to set an li to completed than plain Vanilla Js
-    $("ul").on("click", "li", function(){
+    $("ul").on("click", "li.toDo-li", function(){
         $(this).toggleClass("completed");
     });
 
