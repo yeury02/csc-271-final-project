@@ -26,6 +26,10 @@ h1 {
     float: right
 }
 
+.nav-item {
+    background: blue;
+}
+
 /* add some style to the li's */
 li {
     background: #fff;
