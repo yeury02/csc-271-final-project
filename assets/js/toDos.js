@@ -6,7 +6,7 @@ function addNewToDo() {
     if (inputVal === "") {
         alert("You must write something if you want to add it to your toDo-list");
     } else {
-        // recreat below --> <li><span><i class="fas fa-trash-alt"></i></span> Example </li>
+        // recreate below --> <li><span><i class="fas fa-trash-alt"></i></span> Example </li>
         let li = document.createElement("li");                
         let span = document.createElement("span");
         let i = document.createElement("i");
