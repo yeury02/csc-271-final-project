@@ -23,13 +23,13 @@ h1 {
 span {
     background: #e74c3c;
     height: 40px;
-    margin-right: 20px;
+    margin-right: 0px;
     text-align: center;
     color: white;
     width: 0;
     display: inline-block;
     transition: 0.2s linear;
-    opacity: 0
+    opacity: 100
 }
 
 /* style text input */
