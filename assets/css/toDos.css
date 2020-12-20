@@ -86,3 +86,9 @@ input:focus {
     color: gray;
     text-decoration: line-through
 }
+
+.navbar-span {
+    width: auto;
+    margin-right: 20px;
+    background-color: transparent;
+}
