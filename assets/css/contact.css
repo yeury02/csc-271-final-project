@@ -1,8 +1,4 @@
 body {
-    font-family: "Roboto", Helvetica, Arial, sans-serif;
-    font-weight: 100;
-    font-size: 12px;
-    line-height: 30px;
     color: #777;
     background: #fff
 }
@@ -79,7 +75,7 @@ fieldset {
     cursor: pointer;
     width: 100%;
     border: none;
-    background: #f0715f;
+    background: green;
     color: #FFF;
     margin: 0 0 5px;
     padding: 10px;
