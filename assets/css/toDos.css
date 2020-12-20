@@ -43,13 +43,13 @@ li.toDo-li:nth-child(2n) {
 span {
     background: #e74c3c;
     height: 40px;
-    margin-right: 0px;
+    margin-right: 20px;
     text-align: center;
     color: white;
     width: 0;
     display: inline-block;
     transition: 0.2s linear;
-    opacity: 100
+    opacity: 0
 }
 
 /* do this when hover over an li */

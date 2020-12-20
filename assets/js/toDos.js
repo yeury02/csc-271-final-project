@@ -5,7 +5,6 @@ function addNewToDo() {
     // check if a value was actually inputted
     if (inputVal === "") {
         alert("You must write something if you want to add it to your toDo-list");
-        return false;
     } else {
         // recreat below --> <li><span><i class="fas fa-trash-alt"></i></span> Example </li>
         let li = document.createElement("li");                
@@ -21,7 +20,7 @@ function addNewToDo() {
         li.appendChild(newContent);
 
         let ul = document.getElementById("list");             
-        ul.appendChild(li);                                                  
+        ul.appendChild(li);   
     }
 }
 
@@ -41,20 +40,4 @@ $(document).ready(function(){
         });
         event.stopPropagation();
     });
-
-    // input field fades away after a user inputs value
-    $(".fa-plus").click(function(){
-        $("input[type='text']").fadeToggle();
-    });
 });
-
-// let ul = document.getElementById('list');
-// ul.addEventListener('click', function(event) {
-//     let target = event.target.tagName;
-//     // check if the element clicked is an li
-//     if (target === 'LI'){
-//         // css class
-//         ul.classList.toggle("completed");
-//         // alert(event.target.innerHTML);
-//     }
-// });
